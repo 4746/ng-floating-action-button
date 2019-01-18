@@ -1,10 +1,20 @@
-import { NgModule } from '@angular/core';
-import { NgFloatingActionButtonComponent } from './ng-floating-action-button.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FloatingActionComponent} from './floating-action.component';
+import {ActionButtonDirective} from './action-button.directive';
 
 @NgModule({
-  declarations: [NgFloatingActionButtonComponent],
-  imports: [
+  declarations: [
+    FloatingActionComponent,
+    FloatingActionComponent,
+    ActionButtonDirective
   ],
-  exports: [NgFloatingActionButtonComponent]
+  imports: [CommonModule],
+  exports: [
+    FloatingActionComponent,
+    FloatingActionComponent,
+    ActionButtonDirective
+  ]
 })
-export class NgFloatingActionButtonModule { }
+export class NgFloatingActionButtonModule {
+}

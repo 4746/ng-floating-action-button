@@ -1,6 +1,16 @@
 {
   "name": "@ng4746/ng-floating-action-button",
-  "version": "0.0.1",
+  "description": "Angular7 floating action button",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/4746/ng-floating-action-button",
+  "author": {
+    "name": "Vadim"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4746/ng-floating-action-button.git"
+  },
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"

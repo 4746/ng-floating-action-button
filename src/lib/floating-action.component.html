@@ -1,0 +1,12 @@
+<div #fab class="fixed-action-btn">
+  <a #anchor class="btn-floating btn-large red">
+    <i class="large material-icons">dehaze</i>
+  </a>
+  <ul #menu [hidden]="!buttons || !buttons.length">
+
+    <ng-template ngFor let-button [ngForOf]="buttons">
+      <ng-template [ngTemplateOutlet]="button?.templateRef"></ng-template>
+    </ng-template>
+
+  </ul>
+</div>
