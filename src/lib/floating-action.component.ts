@@ -1,6 +1,6 @@
 import {
   AfterViewInit,
-  Component,
+  Component, ContentChild,
   ContentChildren,
   ElementRef,
   Input,
@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import {ActionButtonDirective} from './action-button.directive';
 import {Helper} from './helper';
+import {IconDirective} from './icon.directive';
 
 @Component({
   selector: 'fab-floating-action',
@@ -21,6 +22,7 @@ import {Helper} from './helper';
 export class FloatingActionComponent implements AfterViewInit, OnDestroy {
 
   @ContentChildren(ActionButtonDirective, {descendants: false}) buttons: QueryList<ActionButtonDirective>;
+  @ContentChild(IconDirective) icon: QueryList<IconDirective>;
   @Input('options') options: IFabPptions = {};
 
   @ViewChild('fab') $fab: ElementRef;
@@ -47,6 +49,9 @@ export class FloatingActionComponent implements AfterViewInit, OnDestroy {
       this._options = Object.assign(this._options, this.options);
     }
 
+    console.log([
+      this.icon
+    ])
     this.isOpen = false;
     const $floatingBtns = this.$fab.nativeElement.querySelectorAll('ul .btn-floating');
     this.$floatingBtns = [].slice.call($floatingBtns, 0);

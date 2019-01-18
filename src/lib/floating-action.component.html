@@ -1,7 +1,10 @@
 <div #fab class="fixed-action-btn">
+
   <a #anchor class="btn-floating btn-large red">
-    <i class="large material-icons">dehaze</i>
+    <ng-template *ngIf="icon" [ngTemplateOutlet]="icon?.templateRef"></ng-template>
+    <i *ngIf="!icon"  class="icon-html-entity">&#9776;</i>
   </a>
+
   <ul #menu [hidden]="!buttons || !buttons.length">
 
     <ng-template ngFor let-button [ngForOf]="buttons">
