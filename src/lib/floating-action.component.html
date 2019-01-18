@@ -1,6 +1,8 @@
-<div #fab class="fixed-action-btn">
+<!--<div #fab class="fixed-action-btn">-->
+<div #fab class="floating-action-button fab-fixed">
 
-  <a #anchor class="btn-floating btn-large red">
+  <!--<a #anchor class="btn-floating btn-large red">-->
+  <a #anchor class="btn-fab btn-fab-large">
     <ng-template *ngIf="icon" [ngTemplateOutlet]="icon?.templateRef"></ng-template>
     <i *ngIf="!icon"  class="icon-html-entity">&#9776;</i>
   </a>

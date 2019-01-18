@@ -1,7 +1,51 @@
+### Install ngx-bootstrap from npm:
 
-[htmlarrows](https://www.toptal.com/designers/htmlarrows/symbols/)
+```bash
+npm install @ng4746/ng-floating-action-button --save
+```
+
+
+Add needed package to NgModule imports:
+
+```cmd
+import { NgFloatingActionButtonModule } from '@ng4746/ng-floating-action-button';
+
+@NgModule({
+  ...
+  imports: [NgFloatingActionButtonModule,...]
+  ...
+})
+```
+
+
+Add component to your page:
+
 ```html
-<i>&#9776;</i>
-<i>&#9866;</i>
-<i>&#10011;</i>
+<fab-floating-action [options]="{direction: 'left'}">
+  <ng-template fabIcon>
+    <i class="material-icons">menu</i>
+  </ng-template>
+  <ng-template fabActionButton>
+    <li>
+      <a class="btn-fab">
+        <i class="material-icons">cloud_download</i>
+      </a>
+    </li>
+    <li>
+      <a class="btn-fab">
+        <i class="material-icons">edit</i>
+      </a>
+    </li>
+    <li>
+      <a class="btn-fab">
+        <i class="material-icons">attachment</i>
+      </a>
+    </li>
+    <li>
+      <a class="btn-fab">
+        <i class="material-icons">insert_emoticon</i>
+      </a>
+    </li>
+  </ng-template>
+</fab-floating-action>
 ```

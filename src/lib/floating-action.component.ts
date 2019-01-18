@@ -49,11 +49,9 @@ export class FloatingActionComponent implements AfterViewInit, OnDestroy {
       this._options = Object.assign(this._options, this.options);
     }
 
-    console.log([
-      this.icon
-    ])
     this.isOpen = false;
-    const $floatingBtns = this.$fab.nativeElement.querySelectorAll('ul .btn-floating');
+    // const $floatingBtns = this.$fab.nativeElement.querySelectorAll('ul .btn-floating');
+    const $floatingBtns = this.$fab.nativeElement.querySelectorAll('ul .btn-fab');
     this.$floatingBtns = [].slice.call($floatingBtns, 0);
     this.$floatingBtnsReverse = [].slice.call($floatingBtns, 0).reverse();
     this.offsetY = 0;
@@ -338,7 +336,7 @@ export class FloatingActionComponent implements AfterViewInit, OnDestroy {
 }
 
 export interface IFabPptions {
-  direction?: 'top' | 'right' | 'buttom';
+  direction?: 'top' | 'right' | 'buttom' | 'left';
   hoverEnabled?: boolean;
   toolbarEnabled?: boolean;
 }
