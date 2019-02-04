@@ -22,7 +22,8 @@ import {IconDirective} from './icon.directive';
 export class FloatingActionComponent implements AfterViewInit, OnDestroy {
 
   @ContentChildren(ActionButtonDirective, {descendants: false}) buttons: QueryList<ActionButtonDirective>;
-  @ContentChild(IconDirective) icon: QueryList<IconDirective>;
+  @ContentChildren(IconDirective, {descendants: false}) icons: QueryList<IconDirective>;
+
   @Input('options') options: IFabPptions = {};
 
   @ViewChild('fab') $fab: ElementRef;
@@ -164,7 +165,7 @@ export class FloatingActionComponent implements AfterViewInit, OnDestroy {
     let time = 0;
     let anim;
     this.$floatingBtnsReverse.forEach((el: HTMLElement) => {
-      anim = el.animate({
+      anim = el.animate(<any>{
         translateY: [this.offsetY, 0],
         translateX: [this.offsetX, 0],
         scale: [0.4, 1],
@@ -185,7 +186,7 @@ export class FloatingActionComponent implements AfterViewInit, OnDestroy {
   private _animateOutFAB() {
     let animation;
     this.$floatingBtnsReverse.forEach((el: HTMLElement) => {
-      animation = el.animate({
+      animation = el.animate(<any>{
         opacity: [1, 0],
         scale: 0.4,
         translateY: this.offsetY,

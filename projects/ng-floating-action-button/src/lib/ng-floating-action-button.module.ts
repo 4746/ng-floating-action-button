@@ -11,7 +11,9 @@ import {IconDirective} from './icon.directive';
     ActionButtonDirective,
     IconDirective
   ],
-  imports: [CommonModule],
+  imports: [
+    CommonModule
+  ],
   exports: [
     FloatingActionComponent,
     FloatingActionComponent,
