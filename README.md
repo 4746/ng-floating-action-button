@@ -1,7 +1,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
-### Install ngx-bootstrap from npm:
+### Install:
 
 ```bash
 npm install @ng4746/ng-floating-action-button --save
