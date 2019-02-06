@@ -1,7 +1,8 @@
 {
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@ng4746/ng-floating-action-button",
   "description": "Angular7 floating action button",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
     "angular button",
     "floating button",
@@ -19,5 +20,15 @@
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"
+  },
+  "ngPackage": {
+    "dest": "../../dist/ng-floating-action-button",
+    "lib": {
+      "entryFile": "src/public_api.ts",
+      "styleIncludePaths": ["styles"]
+    }
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }

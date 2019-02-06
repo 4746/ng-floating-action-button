@@ -8,10 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-lib": "ng build ng-floating-action-button",
-    "build-lib2": "ng build ng-floating-action-button --prod=true",
+    "build-lib": "ng build notice",
+    "build-package": "cd projects/ng-floating-action-button && ng-packagr -p package.json && XCOPY styles ..\\..\\dist\\ng-floating-action-button\\styles  /s /i",
     "npm-pack": "cd dist/ng-floating-action-button && npm pack",
-    "package": "npm run build-lib && npm run npm-pack"
+    "package": "npm run build-package && XCOPY README.md dist\\ng-floating-action-button\\README.md* && npm run npm-pack",
+    "npm-publish": "cd dist/ng-floating-action-button && npm publish --access public"
   },
   "private": true,
   "dependencies": {

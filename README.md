@@ -53,6 +53,13 @@ Add component to your page:
 </fab-floating-action>
 ```
 
+Add styles.scss:
+
+```scss
+$button-large-icon-font-size: 1.4rem !default;
+@import "~@ng4746/ng-floating-action-button/styles/simple";
+```
+
 ## MIT License
 
 [npm-url]: https://www.npmjs.com/package/@ng4746/ng-floating-action-button

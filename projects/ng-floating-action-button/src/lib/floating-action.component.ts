@@ -16,7 +16,6 @@ import {IconDirective} from './icon.directive';
 @Component({
   selector: 'fab-floating-action',
   templateUrl: './floating-action.component.html',
-  styleUrls: ['./floating-action.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class FloatingActionComponent implements AfterViewInit, OnDestroy {
